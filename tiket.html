@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width" />
+      <title>Form Pemesanan Tiket
+      </title>
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+      <link rel="stylesheet" href="css/responsee.css">      
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/template-style.css">
+   </head>
+   <body class="size-600">
+   <div ng-app="myApp" ng-controller="myCtrl">
+ 
+
+
+
+<!-- ````````````````````````````````````````````````````````````KERETA````````````````````````````````````````````````````````````````` -->
+ 
+				
+                  
+                  <div class="s-12 l-6 post-image"  ng-hide="aa">
+                     <FORM name="input">
+<table>
+<tr>
+<td colspan="4">
+     <h4 align="center" ng-click="aa1()">KERETA API</h4></td>
+</tr>
+<tr>
+
+<td>Nama</td>
+<td><input type="text" ng-model="n1" size="20" name="nama" width="100"></td>
+<td>Harga Tiket</td>
+<td><input type="text" size="10" ng-model="n2" name="nama" width="100"></td>
+</tr>
+       
+<tr>
+<td>Tujuan</td>
+<td><select name="nama" ng-model="n3" size=1>
+	<option value="Jakarta">Jakarta</option>
+	<option value="Medan">Medan</option>
+	<option value="Banjarmasin">Banjarmasin
+	</option></select></td>
+<td>Sub Total</td>
+<td><input type="text" size="10" ng-model="n4" name="nama" width="100"></td>
+</tr>
+<tr>
+<td>Kelas</td>
+<td> <select name="nama" ng-model="n5" size=1>
+	<option value="Eksekutif">Eksekutif</option>
+	<option value="Bisnis">Bisnis</option>
+	<option value="Ekonomi">Ekonomi
+	</option></select></td>
+<td>Diskon</td>
+<td><input type="text" size="10" ng-model="n6" name="nama" width="100"></td>
+</tr>
+<tr><td>Jumlah Tiket</td>
+<td> <input type="text" ng-model="n7" size="11" name="nama" width="100"></td>
+<td>Total Bayar</td>
+<td> <input type="text" size="10" ng-model="n8" name="nama" width="100"></td>
+</tr>
+<tr>
+<td>Kereta</td>
+<td><select name="nama" ng-model="n9" size=1>
+	<option value="Argo Bromo Anggrek">Argo Bromo Anggrek</option>
+	<option value="Gumarang">Gumarang</option>
+	<option value="Ciremai Ekspres">Ciremai Ekspres
+	</option></select></td>
+	<td colspan="3"><img border="0" height="50" width="200" src="image1.jpg"/></td>
+</tr> <input type="button" value="PRINT" onclick="printIT()" style="width:55px;"/>
+</table>
+</FORM></div>
+
+<!-- ````````````````````````````````````````````````````````````PESAWAT````````````````````````````````````````````````````````````````` -->
+				  
+                  <div ng-hide="bb" class="s-12 l-6 post-image">                   
+                     <FORM name="input">
+<table>
+<tr>
+<td colspan="4">
+    <h4 align="center" ng-click="aa2()">PESAWAT</h4></td>
+</tr>
+<tr>
+
+<td>Nama</td>
+<td><input type="text" ng-model="n1" size="20" name="n1" width="100"></td>
+<td>Harga Tiket</td>
+<td><input type="text" size="10" ng-model="n2" name="n2" width="100"></td>
+</tr>
+       
+<tr>
+<td>Tujuan</td>
+<td><select name="n3" ng-model="n3" size=1>
+	<option value="Jakarta">Jakarta</option>
+	<option value="Medan">Medan</option>
+	<option value="Banjarmasin">Banjarmasin
+	</option></select></td>
+<td>Sub Total</td>
+<td><input type="text" size="10" ng-model="n4" name="n4" width="100"></td>
+</tr>
+<tr>
+<td>Kelas</td>
+<td> <select name="n5" ng-model="n5" size=1>
+	<option value="Eksekutif">Eksekutif</option>
+	<option value="Bisnis">Bisnis</option>
+	<option value="Ekonomi">Ekonomi
+	</option></select></td>
+<td>Diskon</td>
+<td><input type="text" size="10" ng-model="n6" name="n6" width="100"></td>
+</tr>
+<tr><td>Jumlah Tiket</td>
+<td> <input type="text" ng-model="n7" size="11" name="n7" width="100"></td>
+<td>Total Bayar</td>
+<td> <input type="text" size="10" ng-model="n8" name="n8" width="100"></td>
+</tr>
+<tr>
+<td>Pesawat</td>
+<td><select name="n9" ng-model="n9" size=1>
+	<option value="Lion Air">Lion Air</option>
+	<option value="Indonesia AirAsia">Indonesia AirAsia</option>
+	<option value="Garuda Indonesia">Garuda Indonesia
+	</option></select></td>
+	<td colspan="3"><img border="0" height="50" width="200" src="image2.jpg"/></td>
+</tr>  <input type="button" value="PRINT" onclick="printITp()" style="width:55px;"/>
+</table>
+</FORM></div>
+   
+<!-- ````````````````````````````````````````````````````````````KAPAL````````````````````````````````````````````````````````````````` -->
+			   
+                           
+                  <div ng-hide="cc" class="s-12 l-6 post-image">                   
+                    <FORM name="input">
+<table>
+<tr>
+<td colspan="4">
+     <h4 align="center" ng-click="aa3()">KAPAL</h4></td>
+</tr>
+<tr>
+
+<td>Nama</td>
+<td><input type="text" ng-model="n1" size="20" name="n1" width="100"></td>
+<td>Harga Tiket</td>
+<td><input type="text" size="10" ng-model="n2" name="n2" width="100"></td>
+</tr>
+       
+<tr>
+<td>Tujuan</td>
+<td><select name="n3" ng-model="n3" size=1>
+	<option value="Jakarta">Jakarta</option>
+	<option value="Medan">Medan</option>
+	<option value="Banjarmasin">Banjarmasin
+	</option></select></td>
+<td>Sub Total</td>
+<td><input type="text" size="10" ng-model="n4" name="n4" width="100"></td>
+</tr>
+<tr>
+<td>Kelas</td>
+<td> <select name="n5" ng-model="n5" size=1>
+	<option value="Eksekutif">Eksekutif</option>
+	<option value="Bisnis">Bisnis</option>
+	<option value="Ekonomi">Ekonomi
+	</option></select></td>
+<td>Diskon</td>
+<td><input type="text" size="10" ng-model="n6" name="n6" width="100"></td>
+</tr>
+<tr><td>Jumlah Tiket</td>
+<td> <input type="text" ng-model="n7" size="11" name="n7" width="100"></td>
+<td>Total Bayar</td>
+<td> <input type="text" size="10" ng-model="n8" name="n8" width="100"></td>
+</tr>
+<tr>
+<td>Kapal</td>
+<td><select name="n9" ng-model="n9" size=1>
+	<option value="Pelni">Pelni</option>
+	<option value="Ferry">Ferry</option>
+	<option value="Kelud">Kelud
+	</option></select></td>
+	<td colspan="3"><img border="0" height="50" width="200" src="image3.jpg"/></td>
+</tr>  <input type="button" value="PRINT" onclick="printITk()" style="width:55px;"/>
+</table>
+</FORM></div>
+                
+<!--``````````````````````````````````````````````````````BUS`````````````````````````````````````````````````````````````` -->
+                  <div ng-hide="dd" class="s-12 l-6 post-image">
+                     <FORM name="input">
+<table>
+<tr>
+<td colspan="4">
+     <h4 align="center" ng-click="aa4()">BUS</h4></td>
+</tr>
+<tr>
+
+<td>Nama</td>
+<td><input type="text" ng-model="n1" size="20" name="n1" width="100"></td>
+<td>Harga Tiket</td>
+<td><input type="text" size="10" ng-model="n2" name="n2" width="100"></td>
+</tr>
+       
+<tr>
+<td>Tujuan</td>
+<td><select name="n3" ng-model="n3" size=1>
+	<option value="Jakarta">Jakarta</option>
+	<option value="Medan">Medan</option>
+	<option value="Banjarmasin">Banjarmasin
+	</option></select></td>
+<td>Sub Total</td>
+<td><input type="text" size="10" ng-model="n4" name="n4" width="100"></td>
+</tr>
+<tr>
+<td>Kelas</td>
+<td> <select name="n5" ng-model="n5" size=1>
+	<option value="Eksekutif">Eksekutif</option>
+	<option value="Bisnis">Bisnis</option>
+	<option value="Ekonomi">Ekonomi
+	</option></select></td>
+<td>Diskon</td>
+<td><input type="text" size="10" ng-model="n6" name="n6" width="100"></td>
+</tr>
+<tr><td>Jumlah Tiket</td>
+<td> <input type="text" ng-model="n7" size="11" name="n7" width="100"></td>
+<td>Total Bayar</td>
+<td> <input type="text" size="10" ng-model="n8" name="n8" width="100"></td>
+</tr>
+<tr>
+<td>Bus</td>
+<td><select name="n9" ng-model="n9" size=1>
+	<option value="Bintang Timur">Bintang Timur</option>
+	<option value="Maju Lancar">Maju Lancar</option>
+	<option value="Rajawali Trans">Rajawali Trans
+	</option></select></td>
+	<td colspan="3"><img border="0" height="50" width="200" src="image4.jpg"/></td>
+</tr> <input type="button" value="PRINT" onclick="printITb()" style="width:55px;"/>
+</table>
+</FORM></div>
+
+<!--`````````````````````````````````````````````````````TAMPIL 1`````````````````````````````````````````````````````````` -->
+<div class="tab1" id="kartu" ng-show="showme">
+<center><h2>DATA PEMESAN TIKET</h2></center>
+<table>
+<tr>
+<td>Nama</td>
+<td>{{ n1 }}</td>
+<td>Harga Tiket</td>
+<td>{{ n2 }}</td>
+</tr>
+       
+<tr>
+<td>Tujuan</td>
+<td>{{ n3 }}</td>
+<td>Sub Total</td>
+<td>{{ n4 }}</td>
+</tr>
+<tr>
+<td>Kelas</td>
+<td>{{ n5 }}</td>
+<td>Diskon</td>
+<td>{{ n6 }}</td>
+</tr>
+<tr><td>Jumlah Tiket</td>
+<td>{{n7}}</td>
+<td>Total Bayar</td>
+<td>{{ n8 }}</td>
+</tr>
+<tr>
+<td>Bus</td>
+<td>{{ n9 }}</td>
+	<td colspan="3"></td>
+</tr>
+     </table>
+</div>
+<!--`````````````````````````````````````````````````````TAMPIL 2`````````````````````````````````````````````````````````` -->
+<div class="tab2" id="kartu2" ng-show="showme2">
+<center><h2>DATA PEMESAN TIKET</h2></center>
+<table>
+<tr>
+<td>Nama</td>
+<td>{{ n1 }}</td>
+<td>Harga Tiket</td>
+<td>{{ n2 }}</td>
+</tr>
+       
+<tr>
+<td>Tujuan</td>
+<td>{{ n3 }}</td>
+<td>Sub Total</td>
+<td>{{ n4 }}</td>
+</tr>
+<tr>
+<td>Kelas</td>
+<td>{{ n5 }}</td>
+<td>Diskon</td>
+<td>{{ n6 }}</td>
+</tr>
+<tr><td>Jumlah Tiket</td>
+<td>{{n7}}</td>
+<td>Total Bayar</td>
+<td>{{ n8 }}</td>
+</tr>
+<tr>
+<td>Bus</td>
+<td>{{ n9 }}</td>
+	<td colspan="3"></td>
+</tr>
+     </table>
+</div>
+
+<!--`````````````````````````````````````````````````````TAMPIL 3`````````````````````````````````````````````````````````` -->
+<div class="tab3" id="kartu3" ng-show="showme3">
+<center><h2>DATA PEMESAN TIKET</h2></center>
+<table>
+<tr>
+<td>Nama</td>
+<td>{{ n1 }}</td>
+<td>Harga Tiket</td>
+<td>{{ n2 }}</td>
+</tr>
+       
+<tr>
+<td>Tujuan</td>
+<td>{{ n3 }}</td>
+<td>Sub Total</td>
+<td>{{ n4 }}</td>
+</tr>
+<tr>
+<td>Kelas</td>
+<td>{{ n5 }}</td>
+<td>Diskon</td>
+<td>{{ n6 }}</td>
+</tr>
+<tr><td>Jumlah Tiket</td>
+<td>{{n7}}</td>
+<td>Total Bayar</td>
+<td>{{ n8 }}</td>
+</tr>
+<tr>
+<td>Bus</td>
+<td>{{ n9 }}</td>
+	<td colspan="3"></td>
+</tr>
+     </table>
+</div>
+
+<!--`````````````````````````````````````````````````````TAMPIL 4`````````````````````````````````````````````````````````` -->
+<div class="tab4" id="kartu4" ng-show="showme4">
+<center><h2>DATA PEMESAN TIKET</h2></center>
+<table>
+<tr>
+<td>Nama</td>
+<td>{{ n1 }}</td>
+<td>Harga Tiket</td>
+<td>{{ n2 }}</td>
+</tr>
+       
+<tr>
+<td>Tujuan</td>
+<td>{{ n3 }}</td>
+<td>Sub Total</td>
+<td>{{ n4 }}</td>
+</tr>
+<tr>
+<td>Kelas</td>
+<td>{{ n5 }}</td>
+<td>Diskon</td>
+<td>{{ n6 }}</td>
+</tr>
+<tr><td>Jumlah Tiket</td>
+<td>{{n7}}</td>
+<td>Total Bayar</td>
+<td>{{ n8 }}</td>
+</tr>
+<tr>
+<td>Bus</td>
+<td>{{ n9 }}</td>
+	<td colspan="3"></td>
+</tr>
+     </table>
+</div>
+
+</div>
+
+<script>
+var app= angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+	
+	
+	$scope.aa1= function(){
+	$scope.bb =!$scope.bb;
+	$scope.cc =!$scope.cc;
+	$scope.dd =!$scope.dd;
+	}
+	
+	
+	$scope.aa2= function(){
+	$scope.aa =!$scope.aa;
+	$scope.cc =!$scope.cc;
+	$scope.dd =!$scope.dd;
+	}
+	
+	
+	$scope.aa3= function(){
+	$scope.bb =!$scope.bb;
+	$scope.aa =!$scope.aa;
+	$scope.dd =!$scope.dd;
+	}
+	
+	
+	$scope.aa4= function(){
+	$scope.bb =!$scope.bb;
+	$scope.cc =!$scope.cc;
+	$scope.aa =!$scope.aa;
+	}
+	
+});
+
+$(document).ready(function(){
+	$("h4").click(function(){
+		var div = $("div");
+		div.animate({width: '900px'}, 'slow');
+		div.animate({left: '200px'}, 'slow');
+		div.animate({top: '100px'}, 'slow');
+		div.animate({fontSize: '0.5cm'}, 'slow');
+	});
+ });
+</script>
+
+ <script>
+ 
+ function printIT(){
+ 
+ var printContent = document.getElementById('kartu').innerHTML;
+ var restorepage = document.body.innerHTML;
+ document.body.innerHTML = printContent;
+ window.print();
+ document.body.innerHTML = restorepage;
+ }
+ 
+ function printITp(){
+ 
+ var printContent = document.getElementById('kartu2').innerHTML;
+ var restorepage = document.body.innerHTML;
+ document.body.innerHTML = printContent;
+ window.print();
+ document.body.innerHTML = restorepage;
+ }
+ 
+ function printITk(){
+ 
+ var printContent = document.getElementById('kartu3').innerHTML;
+ var restorepage = document.body.innerHTML;
+ document.body.innerHTML = printContent;
+ window.print();
+ document.body.innerHTML = restorepage;
+ }
+ 
+ function printITb(){
+ 
+ var printContent = document.getElementById('kartu4').innerHTML;
+ var restorepage = document.body.innerHTML;
+ document.body.innerHTML = printContent;
+ window.print();
+ document.body.innerHTML = restorepage;
+ }
+</script>
+
+<!--`````````````````````````````````````````````````````TAMPIL 1`````````````````````````````````````````````````````````` -->
+
+
+
+   </body>
+</html>

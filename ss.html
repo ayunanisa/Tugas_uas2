@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ 
+ 
+<style>
+#panel1, #flip1 {
+width: 400px;
+height: 250px;
+border: solid 1px white;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#panel1 {
+    padding: 50px;
+    display: none;
+}
+#panel2, #flip2 {
+width: 400px;
+height: 250px;
+border: solid 1px white;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#panel2 {
+    padding: 50px;
+    display: none;
+}
+#panel3, #flip3 {
+width: 400px;
+height: 250px;
+border: solid 1px white;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#panel3 {
+    padding: 50px;
+    display: none;
+}
+#panel4, #flip4 {
+width: 400px;
+height: 250px;
+border: solid 1px white;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#panel4 {
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+<h1 align="center">Silahkan Pilih Tiket Anda</h1>
+
+<div id="try1" style="background-color:lavender;margin-left:250px;float:left;">
+<div id="flip1"><h2>Tiket Konser</h2></div>
+<div id="panel1">
+<form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="col-sm-2 control-label">Nama :</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="nama" type="text" value="">
+      </div>
+    </div>
+	 <div class="form-group">
+      <label class="col-sm-2 control-label">Nama Band :</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="namaband" type="text" value="">
+      </div>
+    </div>
+	<div class="form-group">
+      <label class="col-sm-2 control-label">Class</label>
+      <div class="col-sm-10">
+	  <select id="clas" >
+     <option value="fest">Festival</option>
+     <option value="vip">VIP</option>
+    </select>
+	</div>
+    </div>
+	<br><br>
+<div align="center">
+<input type="button" class="btn btn-primary btn-block" onclick="buka()" value="PRINT"/>
+</div>
+</div>
+</form>
+</div>
+
+<script>
+function cetak()
+{
+  var nama = document.getElementById("nama").value;
+  document.getElementById("out1").innerHTML = nama;
+  
+  var clas = document.getElementById("clas").value;
+  document.getElementById("out2").innerHTML = clas;
+  
+  var namaband = document.getElementById("namaband").value;
+  document.getElementById("out3").innerHTML = namaband;
+  }
+function buka(){
+var printContent = document.getElementById('try1').innerHTML;
+var restorepage = document.body.innerHTML;
+document.body.innerHTML=printContent;
+window.print();
+document.body.innerHTML = restorepage;
+}
+
+$(document).ready(function(){
+	$("#flip1").click(function() {
+		$("#flip2").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip1").click(function() {
+		$("#flip3").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip1").click(function() {
+		$("#flip4").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip2").click(function() {
+		$("#flip1").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip2").click(function() {
+		$("#flip3").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip2").click(function() {
+		$("#flip4").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip3").click(function() {
+		$("#flip2").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip3").click(function() {
+		$("#flip1").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip3").click(function() {
+		$("#flip4").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip4").click(function() {
+		$("#flip2").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip4").click(function() {
+		$("#flip3").hide(1000);
+	});
+});
+
+$(document).ready(function(){
+	$("#flip4").click(function() {
+		$("#flip1").hide(1000);
+	});
+});
+  </script>
+
+<div id="try2" style="background-color:lavenderblush;margin-right:250px;float:right;">
+<div id="flip2"><h2>Tiket Pesawat</h2></div>
+<div id="panel2">Hello world!</div>
+</div> 
+<br><br><br><br><br>
+
+<div id="try3" style="background-color:lightcyan;margin-left:250px;float:left;">
+<div id="flip3"><h2>Tiket Kereta</h2></div>
+<div id="panel3">Hello world!</div>
+</div>
+
+<div id="try4" style="background-color:lightgreen;margin-right:250px;float:right;">
+<div id="flip4"><h2>Tiket Bioskop</h2></div>
+<div id="panel4">Hello world!</div>
+</div>
+
+
+ <script> 
+$(document).ready(function(){
+    $("#try1").click(function(){
+	$("#panel1").slideDown(500);
+		$("#flip1").animate({
+		right: '200px',
+            height: '45px',
+            width: '800px'
+        });
+		$("#panel1").animate({
+		right: '200px',
+            height: '400px',
+            width: '710px'
+        });
+    });
+});
+</script>
+ <script> 
+$(document).ready(function(){
+    $("#try2").click(function(){
+	$("#panel2").slideDown(500);
+		$("#flip2").animate({
+		right: '200px',
+            height: '45px',
+            width: '800px'
+        });
+		$("#panel2").animate({
+		right: '200px',
+            height: '400px',
+            width: '710px'
+        });
+    });
+});
+</script>
+ <script> 
+$(document).ready(function(){
+    $("#try3").click(function(){
+	$("#panel3").slideDown(500);
+		$("#flip3").animate({
+           right: '200px',
+            height: '45px',
+            width: '800px'
+        });
+		$("#panel3").animate({
+		right: '200px',
+            height: '400px',
+            width: '710px'
+        });
+    });
+});
+</script>
+ <script> 
+$(document).ready(function(){
+    $("#try4").click(function(){
+	$("#panel4").slideDown(500);
+		$("#flip4").animate({
+		right: '200px',
+            height: '45px',
+            width: '800px'
+        });
+		$("#panel4").animate({
+		right: '200px',
+            height: '400px',
+            width: '710px'
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+	background: none repeat scroll 0 0 #000000;
+	color: #000;
+	font-family: roboto;
+	font-weight: 300;
+}
+
+#post-1 {
+	font-family: Baskerville Old Face;
+	text-align:center;
+}
+
+.post-image img {
+	height: 50px;
+	width: 200px;
+}
+
+.right-align .post-image {
+	float: right;
+}
+.right-align .post-text {
+	float: right;
+	text-align: right;
+}
+.right-align .post-date {
+	float: right;
+	text-align: right;
+}
+.post-1 {
+	background: none repeat scroll 0 0 #000000;
+}
+.aside-block {
+	background: none repeat scroll 0 0 #fff;
+	margin-bottom: 1.25em;
+	padding: 2em;
+}
